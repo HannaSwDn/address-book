@@ -5,10 +5,22 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
+
 export class AppComponent {
-  contact: any;
+  contact: any
+  contacts: any[] = [];
 
   constructor() {
+    this.initContact();
+  }
+
+  createNewContact() {
+    console.log(`Creating the following contact: ${JSON.stringify(this.contact)}`);
+    this.contacts.push(this.contact);
+    this.initContact();
+  }
+
+  private initContact() {
     this.contact = {
       name: ``,
       email: ``,
@@ -19,10 +31,5 @@ export class AppComponent {
       notes: ``
     }
   }
-
-  title = 'address-book';
-
-  createNewContact() {
-    console.log('Someone clicked me!!!')
-  }
+  title = 'address-book'
 }
