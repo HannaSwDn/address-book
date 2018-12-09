@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="image">
+      <img src="{{ contact.image }}" />
+    </div>
+    <div class="content">
+      <div class="location">{{ contact.location }}</div>
+      <h1>{{ contact.name }}</h1>
+      <h2>{{ contact.role }}, {{ contact.company }}</h2>
+      <p>{{ contact.notes }}</p>
+      {{ contact.email }} |
+      <a href="https://www.twitter.com/{{ contact.twitter }}">@{{ contact.twitter }}</a>
+    </div>
+</div>
+
+<ng-container class="container" *ngFor="let c of contacts">
+    <app-contact [contact]="c"></app-contact>
+</ng-container>
