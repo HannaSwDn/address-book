@@ -13,8 +13,7 @@ describe('AppComponent', () => {
         AppComponent, ContactComponent
       ],
       imports: [
-        FormsModule,
-        ContactComponent
+        FormsModule
       ],
     }).compileComponents();
   }));
