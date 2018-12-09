@@ -9,7 +9,7 @@ describe('workspace-project App', () => {
   });
 
   it('should display create contact header', () => {
-    expect(page.getParagraphText()).toEqual('Create contact');
+    expect(page.getTitleText()).toEqual('Create contact');
   });
 
   it('should add a new contact', () => {
